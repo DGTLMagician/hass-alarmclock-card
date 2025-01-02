@@ -1,0 +1,7 @@
+{
+    "name": "Alarm Clock Card",
+    "content_in_root": true,
+    "filename": "alarm-clock-card.js",
+    "render_readme": true,
+    "hide_default_branch": true
+  }
