@@ -1,15 +1,15 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/alarm-clock-card.js',
+  entry: './src/card.js',
   output: {
     filename: 'alarm-clock-card.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname),  // Output to root instead of dist/
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -38,9 +38,12 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname),
     },
     compress: true,
     port: 9000,

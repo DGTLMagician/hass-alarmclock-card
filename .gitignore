@@ -1,9 +1,6 @@
 # Dependencies
 node_modules/
 
-# Build
-dist/
-
 # IDE
 .idea/
 .vscode/
@@ -24,3 +21,6 @@ yarn-error.log*
 .env
 .env.local
 .env.*.local
+
+# Keep the main card file
+!alarm-clock-card.js

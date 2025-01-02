@@ -22,17 +22,11 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: dist
-          path: dist
-
       # This will automatically create a release with the built files
       - name: Upload to release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: dist/alarm-clock-card.js
+          file: alarm-clock-card.js
           asset_name: alarm-clock-card.js
           tag: ${{ github.ref }}
